@@ -5,7 +5,7 @@ body {
 
     background-image: url("bright.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -17,21 +17,25 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0,0,0,0.30);
     z-index: -1;
 }
 
-/* Fake Dynamic Island */
+/* Dynamic Island */
 .island {
     display: none;
 }
 
+/* Main container */
 .container {
     height: 100vh;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
+
     gap: 20px;
 
     padding-left: 20px;
@@ -61,14 +65,15 @@ h1,
 .slider-box {
     display: flex;
     align-items: center;
+
     gap: 20px;
+
     width: 90%;
     max-width: 800px;
 }
 
 .emoji {
     font-size: 40px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
 }
 
 #slider {
@@ -79,8 +84,10 @@ h1,
 
 .numbers {
     width: 70%;
+
     display: flex;
     justify-content: space-between;
+
     font-size: 24px;
     font-weight: bold;
 }
@@ -93,45 +100,49 @@ h1,
 #punishment {
     font-size: 28px;
     font-weight: bold;
+
     text-align: center;
     max-width: 500px;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .island {
         display: block;
+
         position: fixed;
-        top: 10px;
+        top: 12px;
         left: 50%;
         transform: translateX(-50%);
 
-        width: 125px;
-        height: 35px;
+        width: 120px;
+        height: 32px;
 
         background: black;
-        border-radius: 25px;
+        border-radius: 999px;
 
         z-index: 1000;
     }
 
     .top-heading {
         position: fixed;
+
         top: 55px;
         left: 50%;
+
         transform: translateX(-50%);
 
         width: 100%;
-        text-align: center;
 
-        font-size: 22px;
+        text-align: center;
+        font-size: 20px;
+
         z-index: 1000;
     }
 
     .container {
-        padding-top: 90px;
-        justify-content: center;
+        padding-top: 100px;
     }
 
     h1 {
@@ -152,6 +163,6 @@ h1,
     }
 
     #punishment {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
