@@ -21,7 +21,11 @@ body::before {
     z-index: -1;
 }
 
-/* Desktop: Everything centered */
+/* Fake Dynamic Island */
+.island {
+    display: none;
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -32,8 +36,6 @@ body::before {
 
     padding-left: 20px;
     padding-right: 20px;
-
-    position: relative;
 }
 
 .top-heading {
@@ -48,13 +50,12 @@ h1 {
     text-align: center;
 }
 
-/* Text shadow */
 .top-heading,
 h1,
 #value,
 #punishment,
 .numbers {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
 }
 
 .slider-box {
@@ -67,7 +68,7 @@ h1,
 
 .emoji {
     font-size: 40px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
 }
 
 #slider {
@@ -96,29 +97,44 @@ h1,
     max-width: 500px;
 }
 
-/* Mobile / iPhone */
+/* Mobile */
 @media (max-width: 768px) {
 
-    .container {
-        justify-content: center;
-    }
-
-    .top-heading {
+    .island {
+        display: block;
         position: fixed;
-        top: 50px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
 
-        width: 100%;
+        width: 125px;
+        height: 35px;
 
-        text-align: center;
-        font-size: 24px;
+        background: black;
+        border-radius: 25px;
 
         z-index: 1000;
     }
 
+    .top-heading {
+        position: fixed;
+        top: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 100%;
+        text-align: center;
+
+        font-size: 22px;
+        z-index: 1000;
+    }
+
+    .container {
+        padding-top: 90px;
+        justify-content: center;
+    }
+
     h1 {
-        margin-top: 50px;
         font-size: 40px;
     }
 
