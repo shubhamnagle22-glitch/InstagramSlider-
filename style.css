@@ -1,0 +1,11 @@
+body {
+    background: rgb(235, 85, 85);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    margin-top: 100px;
+}
+
+input {
+    width: 250px;
+}
