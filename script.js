@@ -29,87 +29,87 @@ function updateSlider(v) {
     switch (v) {
 
         case -10:
-            punishment.textContent = "10 punishments 💀";
+            punishment.textContent = "punishments";
             break;
 
         case -9:
-            punishment.textContent = "9 punishments 😭";
+            punishment.textContent = "punishments ";
             break;
 
         case -8:
-            punishment.textContent = "8 punishments 😢";
+            punishment.textContent = "punishments";
             break;
 
         case -7:
-            punishment.textContent = "7 punishments 😔";
+            punishment.textContent = "punishments";
             break;
 
         case -6:
-            punishment.textContent = "6 punishments 🥺";
+            punishment.textContent = "punishments";
             break;
 
         case -5:
-            punishment.textContent = "5 punishments 😞";
+            punishment.textContent = "punishments";
             break;
 
         case -4:
-            punishment.textContent = "4 punishments 😕";
+            punishment.textContent = "punishments";
             break;
 
         case -3:
-            punishment.textContent = "3 punishments 😶";
+            punishment.textContent = "punishments ";
             break;
 
         case -2:
-            punishment.textContent = "2 punishments 😐";
+            punishment.textContent = " punishments ";
             break;
 
         case -1:
-            punishment.textContent = "1 punishment 😅";
+            punishment.textContent = " punishment ";
             break;
 
         case 0:
-            punishment.textContent = "No punishment 🙂";
+            punishment.textContent = "No punishment ";
             break;
 
         case 1:
-            punishment.textContent = "1 chocolate 🍫";
+            punishment.textContent = "Good";
             break;
 
         case 2:
-            punishment.textContent = "2 chocolates 🍫";
+            punishment.textContent = "Better";
             break;
 
         case 3:
-            punishment.textContent = "3 hugs 🤗";
+            punishment.textContent = "Best";
             break;
 
         case 4:
-            punishment.textContent = "4 hugs 🤗";
+            punishment.textContent = "Hugs";
             break;
 
         case 5:
-            punishment.textContent = "5 compliments 😊";
+            punishment.textContent = "Kiss ";
             break;
 
         case 6:
-            punishment.textContent = "6 compliments 😊";
+            punishment.textContent = "compliments";
             break;
 
         case 7:
-            punishment.textContent = "7 kisses 😘";
+            punishment.textContent = "Date";
             break;
 
         case 8:
-            punishment.textContent = "8 kisses 😘";
+            punishment.textContent = "Romance";
             break;
 
         case 9:
-            punishment.textContent = "9 hearts ❤️";
+            punishment.textContent = "hearts ";
             break;
 
         case 10:
-            punishment.textContent = "Unlimited love ❤️";
+            punishment.textContent = "Unlimited love";
             break;
     }
 }
