@@ -12,7 +12,7 @@ body {
     transition: background-image 0.5s ease;
 }
 
-/* Dark overlay for better text visibility */
+/* Dark overlay */
 body::before {
     content: "";
     position: fixed;
@@ -21,17 +21,19 @@ body::before {
     z-index: -1;
 }
 
+/* Desktop: Everything centered */
 .container {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center on laptop */
+    justify-content: center;
     align-items: center;
+    gap: 20px;
 
     padding-left: 20px;
     padding-right: 20px;
 
-    gap: 20px;
+    position: relative;
 }
 
 .top-heading {
@@ -94,27 +96,29 @@ h1,
     max-width: 500px;
 }
 
-/* Mobile */
+/* Mobile / iPhone */
 @media (max-width: 768px) {
 
     .container {
         justify-content: center;
-        position: relative;
     }
 
     .top-heading {
-        position: absolute;
-        top: 65px; /* Near iPhone notch */
+        position: fixed;
+        top: 50px;
         left: 50%;
         transform: translateX(-50%);
 
         width: 100%;
 
-        font-size: 24px;
         text-align: center;
+        font-size: 24px;
+
+        z-index: 1000;
     }
 
     h1 {
+        margin-top: 50px;
         font-size: 40px;
     }
 
