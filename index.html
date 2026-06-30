@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Emoji Slider</title>
+    <title>10 Punishments</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h2>How bad am I? ❤️</h2>
+    <div class="container">
 
-    <div class="slider-box">
-        <span>😞</span>
-        <input type="range" min="0" max="100" value="50" id="slider">
+        <h3 class="top-heading">10 Punishments 💀</h3>
+
+        <h1>Your overall behaviour ❤️</h1>
+
+        <div class="slider-box">
+
+            <span class="emoji">☹️</span>
+
+            <input
+                type="range"
+                min="-10"
+                max="10"
+                value="0"
+                step="1"
+                id="slider">
+
+            <span class="emoji">😊</span>
+
+        </div>
+
+        <div class="numbers">
+            <span>-10</span>
+            <span>-8</span>
+            <span>-6</span>
+            <span>-4</span>
+            <span>-2</span>
+            <span>0</span>
+            <span>+2</span>
+            <span>+4</span>
+            <span>+6</span>
+            <span>+8</span>
+            <span>+10</span>
+        </div>
+
+        <h2 id="value">0%</h2>
+
+        <p id="punishment">No punishment 🙂</p>
+
     </div>
-
-    <p id="value">50%</p>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

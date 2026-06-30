@@ -1,11 +1,92 @@
 body {
+    margin: 0;
     background: rgb(235, 85, 85);
     color: white;
-    text-align: center;
-    font-family: Arial;
-    margin-top: 100px;
+    font-family: Arial, sans-serif;
 }
 
-input {
-    width: 250px;
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-heading {
+    font-size: 28px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.slider-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.emoji {
+    font-size: 40px;
+}
+
+#slider {
+    flex: 1;
+    height: 10px;
+    cursor: pointer;
+}
+
+.numbers {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#value {
+    font-size: 60px;
+    margin: 0;
+}
+
+#punishment {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+
+    .top-heading {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .emoji {
+        font-size: 30px;
+    }
+
+    .numbers {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    #value {
+        font-size: 40px;
+    }
+
+    #punishment {
+        font-size: 20px;
+    }
 }
