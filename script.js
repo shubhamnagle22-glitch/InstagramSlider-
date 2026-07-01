@@ -20,14 +20,14 @@ function updateSlider(v) {
 
     v = parseInt(v);
 
-    // Show value
+    // Show percentage
     if (v > 0) {
         value.textContent = "+" + v + "%";
     } else {
         value.textContent = v + "%";
     }
 
-    // Punishments
+    // Punishments & Rewards
     switch (v) {
 
         case -10:
@@ -55,23 +55,23 @@ function updateSlider(v) {
             break;
 
         case -4:
-            punishment.textContent = "🎥 Say sorry + 50 Squats 🏋️‍♂️";
+            punishment.textContent = "🎥 Say sorry + 50 Squats 🏋️";
             break;
 
         case -3:
-            punishment.textContent = "🎥 Say sorry + 30 Squats 🏋️‍♂️";
+            punishment.textContent = "🎥 Say sorry + 30 Squats 🏋️";
             break;
 
         case -2:
-            punishment.textContent = "🎥 Say sorry + 15 Squats 🏋️‍♂️";
+            punishment.textContent = "🎥 Say sorry + 15 Squats 🏋️";
             break;
 
         case -1:
-            punishment.textContent = "Apologize by saying it or writing it 🥰";
+            punishment.textContent = "Apologize by saying or writing 🥰";
             break;
 
         case 0:
-            punishment.textContent = "No punishment";
+            punishment.textContent = "No punishment 🙂";
             break;
 
         case 1:
@@ -115,10 +115,45 @@ function updateSlider(v) {
             break;
     }
 
-    // Background image change
+    // Background + slider color
     if (v < 0) {
         document.body.style.backgroundImage = "url('dark.jpg')";
-    } else {
+        slider.style.background = "#ff3b30";
+    }
+    else if (v > 0) {
         document.body.style.backgroundImage = "url('bright.jpg')";
+        slider.style.background = "#34c759";
+    }
+    else {
+        document.body.style.backgroundImage = "url('bright.jpg')";
+        slider.style.background =
+            "linear-gradient(to right, #ff3b30 0%, #ff3b30 50%, #34c759 50%, #34c759 100%)";
+    }
+
+    // Remove previous highlights
+    document.querySelectorAll(".negative-list div").forEach(item => {
+        item.classList.remove("active-negative");
+    });
+
+    document.querySelectorAll(".positive-list div").forEach(item => {
+        item.classList.remove("active-positive");
+    });
+
+    // Highlight current negative value
+    if (v < 0) {
+        const selected = document.getElementById(v.toString());
+
+        if (selected) {
+            selected.classList.add("active-negative");
+        }
+    }
+
+    // Highlight current positive value
+    if (v > 0) {
+        const selected = document.getElementById(v.toString());
+
+        if (selected) {
+            selected.classList.add("active-positive");
+        }
     }
 }
